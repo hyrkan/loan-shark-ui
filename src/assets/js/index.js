@@ -1,9 +1,8 @@
 $(function() {
     "use strict";
 
-	
 // chart 1
-
+if (document.getElementById("chart1")) {
   var ctx = document.getElementById("chart1").getContext('2d');
    
   var gradientStroke1 = ctx.createLinearGradient(0, 0, 0, 300);
@@ -57,11 +56,12 @@ $(function() {
 				  }
 			  }
       });
+} // end chart 1
 	  
 	 
 // chart 2
-
- var ctx = document.getElementById("chart2").getContext('2d');
+if (document.getElementById("chart2")) {
+  var ctx = document.getElementById("chart2").getContext('2d');
 
   var gradientStroke1 = ctx.createLinearGradient(0, 0, 0, 300);
       gradientStroke1.addColorStop(0, '#fc4a1a');
@@ -71,12 +71,11 @@ $(function() {
       gradientStroke2.addColorStop(0, '#4776e6');
       gradientStroke2.addColorStop(1, '#8e54e9');
 
-
   var gradientStroke3 = ctx.createLinearGradient(0, 0, 0, 300);
       gradientStroke3.addColorStop(0, '#ee0979');
       gradientStroke3.addColorStop(1, '#ff6a00');
 	  
-	var gradientStroke4 = ctx.createLinearGradient(0, 0, 0, 300);
+  var gradientStroke4 = ctx.createLinearGradient(0, 0, 0, 300);
       gradientStroke4.addColorStop(0, '#42e695');
       gradientStroke4.addColorStop(1, '#3bb2b8');
 
@@ -109,30 +108,28 @@ $(function() {
                 display: false,
              }
           }
-          
        }
       });
+} // end chart 2
 
-   
 
-// worl map
-
-jQuery('#geographic-map-2').vectorMap(
-{
-    map: 'world_mill_en',
-    backgroundColor: 'transparent',
-    borderColor: '#818181',
-    borderOpacity: 0.25,
-    borderWidth: 1,
-    zoomOnScroll: false,
-    color: '#009efb',
-    regionStyle : {
-        initial : {
-          fill : '#008cff'
-        }
-      },
-    markerStyle: {
-      initial: {
+// world map
+if (document.getElementById("geographic-map-2")) {
+  jQuery('#geographic-map-2').vectorMap({
+      map: 'world_mill_en',
+      backgroundColor: 'transparent',
+      borderColor: '#818181',
+      borderOpacity: 0.25,
+      borderWidth: 1,
+      zoomOnScroll: false,
+      color: '#009efb',
+      regionStyle : {
+          initial : {
+            fill : '#008cff'
+          }
+        },
+      markerStyle: {
+        initial: {
 				r: 9,
 				'fill': '#fff',
 				'fill-opacity':1,
@@ -141,25 +138,25 @@ jQuery('#geographic-map-2').vectorMap(
 				'stroke-opacity': 0.4
                 },
                 },
-    enableZoom: true,
-    hoverColor: '#009efb',
-    markers : [{
-        latLng : [21.00, 78.00],
-        name : 'Lorem Ipsum Dollar'
-      
-      }],
-    hoverOpacity: null,
-    normalizeFunction: 'linear',
-    scaleColors: ['#b6d6ff', '#005ace'],
-    selectedColor: '#c9dfaf',
-    selectedRegions: [],
-    showTooltip: true,
-});
+      enableZoom: true,
+      hoverColor: '#009efb',
+      markers : [{
+          latLng : [21.00, 78.00],
+          name : 'Lorem Ipsum Dollar'
+        }],
+      hoverOpacity: null,
+      normalizeFunction: 'linear',
+      scaleColors: ['#b6d6ff', '#005ace'],
+      selectedColor: '#c9dfaf',
+      selectedRegions: [],
+      showTooltip: true,
+  });
+} // end world map
 
 
 // chart 3
-
- var ctx = document.getElementById('chart3').getContext('2d');
+if (document.getElementById('chart3')) {
+  var ctx = document.getElementById('chart3').getContext('2d');
 
   var gradientStroke1 = ctx.createLinearGradient(0, 0, 0, 300);
       gradientStroke1.addColorStop(0, '#00b09b');
@@ -177,9 +174,8 @@ jQuery('#geographic-map-2').vectorMap(
                 ],
 				fill: {
 					target: 'origin',
-					above: 'rgb(21 202 32 / 15%)',   // Area will be red above the origin
-					//below: 'rgb(21 202 32 / 100%)'   // And blue below the origin
-				  }, 
+					above: 'rgb(21 202 32 / 15%)',
+				}, 
                 tension: 0.4,
                 borderColor: [
                   gradientStroke1
@@ -201,12 +197,12 @@ jQuery('#geographic-map-2').vectorMap(
 				  }
 			  }
       });
-
+} // end chart 3
 
 
 // chart 4
-
-var ctx = document.getElementById("chart4").getContext('2d');
+if (document.getElementById("chart4")) {
+  var ctx = document.getElementById("chart4").getContext('2d');
 
   var gradientStroke1 = ctx.createLinearGradient(0, 0, 0, 300);
       gradientStroke1.addColorStop(0, '#ee0979');
@@ -230,15 +226,13 @@ var ctx = document.getElementById("chart4").getContext('2d');
               gradientStroke2,
               gradientStroke3
             ],
-
-             hoverBackgroundColor: [
+            hoverBackgroundColor: [
               gradientStroke1,
               gradientStroke2,
               gradientStroke3
             ],
-
             data: [50, 50, 50],
-      borderWidth: [1, 1, 1]
+            borderWidth: [1, 1, 1]
           }]
         },
         options: {
@@ -249,16 +243,13 @@ var ctx = document.getElementById("chart4").getContext('2d');
                 display: false,
              }
           }
-          
        }
       });
-
-	  
-
+} // end chart 4
 
 
-  // chart 5
-
+// chart 5
+if (document.getElementById("chart5")) {
     var ctx = document.getElementById("chart5").getContext('2d');
    
       var gradientStroke1 = ctx.createLinearGradient(0, 0, 0, 300);
@@ -309,9 +300,6 @@ var ctx = document.getElementById("chart4").getContext('2d');
 				  }
 			  }
       });
+} // end chart 5
 
-
-
-
-   });	 
-   
+});

@@ -1,10 +1,10 @@
 $(function () {
 	"use strict";
-	/* perfect scrol bar */
-	new PerfectScrollbar(".scroll-menu");
-	new PerfectScrollbar(".app-container");
-	new PerfectScrollbar('.header-message-list');
-	new PerfectScrollbar('.header-notifications-list');
+	/* perfect scroll bar */
+	if (document.querySelector(".scroll-menu")) new PerfectScrollbar(".scroll-menu");
+	if (document.querySelector(".app-container")) new PerfectScrollbar(".app-container");
+	if (document.querySelector('.header-message-list')) new PerfectScrollbar('.header-message-list');
+	if (document.querySelector('.header-notifications-list')) new PerfectScrollbar('.header-notifications-list');
 	// search bar
 	$(".mobile-search-icon").on("click", function () {
 		$(".search-bar").addClass("full-search-bar");
